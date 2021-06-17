@@ -1,0 +1,41 @@
+.detail-main>.main-one>.menu {
+    width: 100%;
+    height: 1000px;
+}
+
+.detail-main>.main-one>.menu>ol {
+    width: 100%;
+    height: 60px;
+    font-size: x-large;
+    float: left;
+    background-color: rgb(226, 235, 245);
+}
+
+.detail-main>.main-one>.menu>ol>a {
+    width: 100%;
+    font-size: x-large;
+    padding: 0;
+    margin: 0;
+    line-height: 60px;
+    color: rgb(72, 89, 243);
+    padding-left: 3%;
+}
+
+.detail-main>.main-one>.menu>.one {
+    width: 1000px;
+    height: auto;
+    overflow: hidden;
+}
+
+.detail-main>.main-one>.menu>.one>li {
+    width: 30%;
+    height: 50px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+}
+
+.detail-main>.main-one>.menu>.one>li>a {
+    font-size: 20px;
+    font: bold;
+}

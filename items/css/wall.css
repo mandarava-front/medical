@@ -1,0 +1,35 @@
+/* 留言板 */
+.message h2 {
+    color: #333;
+}
+
+.message form textarea {
+    resize: none;
+}
+
+.message .form-group {
+    padding-top: 10px;
+    overflow: hidden;
+    height: auto;
+}
+
+.message .form-group button {
+    margin-right: 30px;
+}
+
+.showmsg {
+    margin-bottom: 50px;
+}
+
+.showmsg li {
+    margin: 20px 0;
+}
+
+.showmsg li div.media {
+    padding: 15px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.showmsg li:last-child div.media {
+    border: none;
+}

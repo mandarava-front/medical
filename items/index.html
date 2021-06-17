@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="data:;base64,=">
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        form {
+            background-color: #ccc;
+            width: 400px;
+            height: 400px;
+            border: 2px solid #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="http://localhost:1337" method="POST">
+        <input type="text" name="name">
+        <input type="submit" value="提交">
+    </form>
+    <div class="logo"><img src="../img/logo2.png" alt=""></div>
+    <div class="logo"><img src="./img/lzy.jpg" alt=""></div>
+
+    <h3>请填写下表Ajax提交</h3>
+    <form>
+        <label>姓名：<input type="text" id="name" name="name" value="zyd317"></label>
+        <br><br>
+        <button id="b1">提交</button>
+        <br><br> 您的姓名是：
+        <output id="output"></output>
+    </form>
+    <script>
+        document.getElementById("b1").onclick = function(e) {
+            var name = document.getElementById("name").value;
+            var output = document.getElementById("output");
+            var xhr = new XMLHttpRequest();
+            xhr.open("post", "/t"); //把数据传到哪里？
+            xhr.send();
+
+            xhr.onreadystatechange = function() {
+                console.log("readyState==" + xhr.readyState + " status==" + xhr.status)
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) {
+                        console.log(xhr.responseText)
+                    }
+                }
+            };
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支付宝-付款</title>
+    <!-- <script src="jquery-1.11.2.min.js"></script> -->
+    <link rel="stylesheet" href="../css/pay.css">
+
+
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="topbar-wrap fn-clear">
+            <a href="#" class="topbar-link-last" target="_blank" seed="goToHelp">常见问题</a>
+            <span class="topbar-link-first">你好，欢迎使用支付宝付款！</span>
+        </div>
+    </div>
+
+    <div id="header">
+        <div class="header-container fn-clear">
+            <div class="header-title">
+                <div class="alipay-logo"></div>
+                <span class="logo-title">我的收银台</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="container">
+        <div class="order-extand-explain">
+            <span>正在使用即时到账交易</span>
+            <span>订单号:test-20210120170558-4013</span>
+        </div>
+        <div class="cashier-center-container">
+            <div class="pay">
+                <div class="left">
+                    <div class="qrcode-header">
+                        <div class="ft-center" style="font-size:12px;margin-bottom:8px">扫一扫付款（元）</div>
+                        <div class="ft-center qrcode-header-money"><span>60.00</span></div>
+                    </div>
+                    <div class="qrcode-integration">
+                        <div class="qrcode-img-wrapper" data-role="qrPayImgWrapper">
+                            <div data-role="qrPayImg" class="qrcode-img-area">
+                                <div class="ui-loading qrcode-loading" data-role="qrPayImgLoading"
+                                    style="display: none;">加载中
+                                </div>
+                                <div style="position: relative;display: inline-block;">
+                                    <canvas width="168" height="168" style="float: left;"></canvas>
+                                    <img src="../img/zfbpay.png" id="imgCode2"
+                                        style="position: absolute;top: 12%;left: -3%;width:170px;height:170px;margin-left: -21px;margin-top: -21px;">
+                                </div>
+                            </div>
+                            <!-- <p><input type="hidden" value="test-20210120173021-9189" id="orderId">
+                                <strong id="hour_show"><s id="h"></s>订单支付有效期剩</strong>
+                                <strong id="minute_show">2分</strong>
+                                <strong id="second_show">10秒</strong>
+                            </p>
+                            <div class="time-item"></div>
+                            <p></p> -->
+
+                            <div class="qrcode-img-explain fn-clear">
+
+                                <img class="fn-left" src="../img/T1bdtfXfdiXXXXXXXX.png" alt="扫一扫标识"
+                                    seed="qrcodeImgExplain-tImagesT1bdtfXfdiXXXXXXXX" smartracker="on">
+                                <div class="fn-left" style="font-size: 12px;">打开手机支付宝<br>扫一扫继续付款</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qrcode-foot" data-role="qrPayFoot" style="display: block;">
+                        <div data-role="qrPayExplain" class="qrcode-explain fn-hide" style="display: block;">
+                            <a href="#" class="qrcode-downloadApp"
+                                data-boxurl="https://cmspromo.alipay.com/down/new.htm" data-role="dl-app"
+                                seed="NewQr_qr-pay-download">首次使用请下载手机支付宝</a>
+                        </div>
+                    </div>
+                    <div class="qrguide-area" id="J_qrguideArea" seed="NewQr_animationClick">
+                        <!-- <img src="ustyle/paycssjs/experiencepay3/T13CpgXf8mXXXXXXXX.png" class="qrguide-area-img background" seed="J_qrguideArea-qrguideAreaImg" smartracker="on" style="display: block;"> -->
+                        <img src="../img/T1ASFgXdtnXXXXXXXX.jpg" class="qrguide-area-img active"
+                            seed="J_qrguideArea-qrguideAreaImgT1" smartracker="on" style="display: block;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="pay.js"></script> -->
+</body>
+
+</html>

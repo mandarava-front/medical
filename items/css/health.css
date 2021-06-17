@@ -1,0 +1,113 @@
+.content{
+    width: 80%;
+    text-align: center;
+    height: auto;
+    position: relative;
+    margin-left: 10%;
+}
+.video{
+    width: 100%;
+    height: 400px;
+}
+.content-row{
+    width: 100%;
+    height: auto;
+}   
+.content-row p{
+    font-size: 24px;
+    margin-top: 3px;
+    font-weight: bold;
+    text-align: left;
+}
+.content-news,.content-intro{
+    width: 100%;
+    height: auto;
+}
+.content-news li{
+    cursor: pointer;
+    width: 90%;
+    height: 50px;
+    text-align: left;
+    border-bottom: 1px dashed #1a355e;
+    position: relative;
+    line-height: 50px;
+    font-size: 20px;
+}
+.content-news :hover{
+    text-decoration: underline;
+    color: #1a355e;
+}
+.content-intro a{
+    display: block;
+    margin-top: 10px;
+    width: 90%;
+    /* height: 150px; */
+}
+.content-intro a img{
+    width: 100%;
+    height: 100%;
+}
+.toggle-mask {
+    position: relative;
+    cursor: pointer;
+}
+.toggle-mask .mask {
+    /* position: absolute; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: #1a355e;
+    opacity: .8;
+    color: #fff;
+    text-align: center;
+    height: 30%;
+    line-height: 50px;
+}
+.article{
+    clear: both;
+    width: 100%;
+    height: auto;
+}
+.article .art{
+    padding-top: 30px;
+}
+.article .art h1{
+    font-size: 35px;
+    line-height: 36px;
+    font-weight: 400;
+    text-align: center;
+}
+.art .date{
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    padding: 15px 0;
+}
+.art .summary{
+    display: block;
+    background: #f6f6f6;
+    color: #666;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 20px 30px;
+    border: #e0e0e0 1px solid;
+    margin-top: 10px;
+}
+.art .content {
+    line-height: 30px;
+    font-size: 14px;
+}
+.art .content p {
+    padding-top: 20px;
+    float: left;
+}
+footer{
+    clear: both;
+}
+
+/* jyf添加 */
+.cont{
+    margin-top: 50px;
+}

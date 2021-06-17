@@ -1,0 +1,197 @@
+.yslist06b div {
+    border-top: 0;
+    line-height: 28px;
+}
+
+.yslist06 div {
+    clear: both;
+    overflow: hidden;
+    zoom: 1;
+    position: relative;
+    border-top: 1px solid #ddd;
+    padding: 12px 0 11px;
+    line-height: 30px;
+    margin-top: -1px;
+}
+
+.yslist06b {
+    margin-top: 8px;
+}
+
+.yslist06 {
+    clear: both;
+    overflow: hidden;
+    zoom: 1;
+    position: relative;
+}
+
+.yslist06b div ol {
+    width: 126px;
+    color: #000;
+}
+
+.link06,
+.c_border02_tag ul a {
+    color: #000;
+}
+
+.yslist06b div ul {
+    width: 744px;
+}
+
+.yslist06 div ul {
+    float: right;
+    width: 900px;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.yslist06b div ul li {
+    width: 236px;
+    height: 28px;
+}
+
+.yslist06 div ul li {
+    float: left;
+    width: 270px;
+    overflow: hidden;
+    height: 30px;
+    padding-left: 12px;
+}
+
+a.yslink07,
+.yslist06b div ul li a {
+    color: #5a7ba8;
+}
+
+.yslist06b div ul li em {
+    font-style: normal;
+    color: #999;
+}
+
+.list-cr {
+    float: left;
+}
+
+.list-cr>div {
+    width: 200px;
+    background-color: #009582;
+    height: 230px;
+}
+
+.list-content>p {
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.list-cl {
+    margin-left: 25px;
+    float: left;
+}
+
+.list-cl>div {
+    width: 600px;
+    height: 230px;
+    background-color: #009582;
+}
+
+.dis {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.return-top {
+    width: 50px;
+    height: 50px;
+    background-color: #009582;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.return-top>a {
+    color: #fff;
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* .thumbnail{
+    width: 400px;
+    height: 600px;
+}
+.thumbnail>img{
+    width: 300px;
+    height: 250px;
+} */
+.fd {
+    float: left;
+    margin-right: 35px;
+}
+
+.tz {
+    width: 850px;
+    height: 50px;
+    background-color: #009582;
+}
+
+.tz>p {
+    font-size: 3.2rem;
+    color: #fff;
+    text-align: center;
+}
+
+select {
+    margin-top: 50px;
+    width: 300px;
+    height: 30px;
+    font-weight: bold;
+    color: #009582;
+    border-color: #045247;
+    margin-bottom: 200px;
+}
+
+.btn-default {
+    background-color: #009582;
+    color: #fff;
+    width: 100px;
+    height: 60px;
+}
+
+.dis>div>a>div {
+    border: 1px solid rgb(211, 208, 208);
+    border-radius: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.dis>div>a>div>img {
+    margin-top: 20px;
+}
+
+#aj>a>div>img,
+#aj2>a>div>img,
+#aj3>a>div>img,
+#aj4>a>div>img,
+#aj5>a>div>img,
+#aj6>a>div>img,
+#aj7>a>div>img,
+#aj8>a>div>img {
+    width: 350px;
+    height: 250px;
+    cursor: pointer;
+}
+
+#aj>a>div,
+#aj2>a>div,
+#aj3>a>div,
+#aj4>a>div,
+#aj5>a>div,
+#aj6>a>div,
+#aj7>a>div,
+#aj8>a>div {
+    width: 400px;
+    height: 500px;
+    float: left;
+    margin-right: 50px;
+}

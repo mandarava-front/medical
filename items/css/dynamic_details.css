@@ -1,0 +1,47 @@
+.main-left>.breadcrumb{
+    background-color: #fff;
+}
+.main-left>.breadcrumb a{
+    color: #777;
+}
+.inner-title{
+    margin: 30px 0;
+}
+.inner-under{
+    border-bottom: dotted 1px #d8d8d8;
+}
+.inner-under>.under-inline,.pinglun{
+    display: inline-block;
+}
+.inner-under>.under-inline>a{
+    color: #777;
+}
+.pinglun>a{
+    border-left: 1px solid #777;
+    padding-left: 10px;
+}
+.inner-img{
+    margin-top: 10px;
+}
+.inner-text{
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.9;
+}
+.inner-text>p{
+    text-indent: 2em;
+}
+.but {
+    margin: 0 auto;
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    border-radius: 10px;
+    line-height: 30px;
+    text-align: center;
+    background-color: rgb(59, 131, 240);
+}
+.but:hover {
+    background-color: #ccc;
+    cursor:pointer
+}

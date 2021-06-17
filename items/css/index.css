@@ -1,0 +1,116 @@
+body {
+    overflow-x: hidden;
+}
+
+.banner>.row {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 轮播图 开始 =================================== */
+
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-caption {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.82);
+    height: 160px;
+    text-shadow: none;
+}
+
+.carousel-caption h2 {
+    padding: 0;
+    margin: 0;
+    margin-left: 30px;
+    font-size: 32px;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: inherit;
+    color: #555;
+    text-align: left;
+}
+
+.carousel-caption h2 a {
+    color: #555;
+}
+
+.carousel-caption h2>a:hover {
+    color: #00a7eb;
+}
+
+.carousel-caption h2>.tips {
+    margin-right: 10px;
+    display: inline-block;
+    top: -2px;
+    position: relative;
+}
+
+.carousel-caption .tips>a {
+    padding: 5px 10px;
+    background-color: #19b5fe;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    border-width: 0;
+}
+
+.carousel-caption p {
+    margin-left: 30px;
+    margin-top: 5px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* 索引器 */
+
+.carousel-indicators {
+    bottom: 10px;
+    left: 0;
+    margin-left: 0;
+    width: 100%;
+}
+
+.carousel-indicators>li {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #32a5e7;
+    background: none;
+    cursor: pointer;
+    margin: 0;
+    margin-top: 2px;
+    margin-right: 3px;
+    opacity: 1;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.carousel-indicators>li.active {
+    width: 16px;
+    height: 16px;
+    background-color: #32a5e7;
+    margin-top: 2px;
+    margin-right: 3px;
+}
+
+
+/*修改搜索框样式*/
+
+
+/* 轮播图 结束 =================================== */

@@ -1,0 +1,58 @@
+select {
+    margin-top: 50px;
+    width: 32%;
+    height: 30px;
+    font-weight: bold;
+    color: #2A9EE0;
+    border-color: #045247;
+    margin-bottom: 50px;
+}
+
+.btn-default {
+    background-color: #2A9EE0;
+    color: #fff;
+    width: 100px;
+    height: 60px;
+}
+
+.dis>div>div {
+    border: 1px solid rgb(211, 208, 208);
+    border-radius: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.dis>div>div>img {
+    margin-top: 20px;
+}
+
+.date {
+    width: 180px;
+    display: inline-block;
+}
+
+#aj>div>img,
+#aj2>div>img,
+#aj3>div>img,
+#aj4>div>img,
+#aj5>div>img,
+#aj6>div>img,
+#aj7>div>img,
+#aj8>div>img {
+    width: 350px;
+    height: 250px;
+}
+
+#aj>div,
+#aj2>div,
+#aj3>div,
+#aj4>div,
+#aj5>div,
+#aj6>div,
+#aj7>div,
+#aj8>div {
+    width: 400px;
+    height: 500px;
+    float: left;
+    margin-right: 50px;
+}

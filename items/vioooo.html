@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>face_detect</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-sm-6">
+                <h3 class="text-center">
+                    摄像头采集的原始图像
+                </h3>
+                <video id="video" autoplay style="display: inline;"></video>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        //如果在套接字的服务器上写入不在utf-8中的字符，则客户端将断开连接并发生错误：WebSocket connection to 'ws://sharoid.ru:8000/' failed: Could not decode a text frame as UTF-8.
+
+        var ws = new WebSocket("ws://localhost:8089/2"); //指定连接的URL
+
+        ws.binaryType = "arraybuffer";
+
+        ws.onopen = function() { //连接建立时会触发
+            console.log('WebSocket open'); //成功连接上Websocket
+        };
+
+        ws.onmessage = function(evt) { //接受服务器返回的数据
+
+            console.log('message: ' + evt.data); //打印服务端返回的数据
+            var bytes = new Uint8Array(evt.data);
+            var data = "";
+            var len = bytes.byteLength;
+
+
+            for (var i = 0; i < len; ++i) {
+                data += String.fromCharCode(bytes[i]);
+            }
+            var img = document.getElementById("target");
+            img.src = "data:image/png;base64," + window.btoa(data);
+            //记录每次连接的时间
+            //var timestamp = new Date().getTime();
+            //console.log("end=" + timestamp);
+
+        };
+
+
+        ws.onclose = function() { //连接关闭时触发
+            //    alert("Closed");
+            console.log('websocket已关闭');
+        };
+
+        ws.onerror = function(err) {
+            alert("Error: " + err);
+        };
+        //if (ws.readyState == WebSocket.OPEN) ws.onopen()
+        // var getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mediaDevices.getUserMedia || navigator.msGetUserMedia);
+        var constraints = {
+            audio: true,
+            video: {
+                width: 320,
+                height: 240
+            }
+        };
+
+        var video = document.querySelector('video');
+        var canvas = document.querySelector('canvas');
+        var ctx = canvas.getContext('2d');
+
+        // 老的浏览器可能根本没有实现 mediaDevices，所以我们可以先设置一个空的对象
+        if (navigator.mediaDevices === undefined) {
+            navigator.mediaDevices = {};
+        }
+
+        // 一些浏览器部分支持 mediaDevices。我们不能直接给对象设置 getUserMedia
+        // 因为这样可能会覆盖已有的属性。这里我们只会在没有getUserMedia属性的时候添加它。
+        if (navigator.mediaDevices.getUserMedia === undefined) {
+            navigator.mediaDevices.getUserMedia = function(constraints) {
+
+                // 首先，如果有getUserMedia的话，就获得它
+                var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+                // 一些浏览器根本没实现它 - 那么就返回一个error到promise的reject来保持一个统一的接口
+                if (!getUserMedia) {
+                    return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+                }
+
+                // 否则，为老的navigator.getUserMedia方法包裹一个Promise
+                return new Promise(function(resolve, reject) {
+                    getUserMedia.call(navigator, constraints, resolve, reject);
+                });
+            }
+        }
+
+        navigator.mediaDevices.getUserMedia({
+                audio: true,
+                video: true
+            }).then(function(localMediaStream) {
+                // 旧的浏览器可能没有srcObject
+                if ("srcObject" in video) {
+                    video.srcObject = localMediaStream;
+                } else {
+                    // 防止再新的浏览器里使用它，应为它已经不再支持了
+                    video.src = window.URL.createObjectURL(stream);
+                }
+                video.onloadedmetadata = function(e) {
+                    //console.log("Label: " + localMediaStream.label);
+                    console.log("AudioTracks", localMediaStream.getAudioTracks());
+                    console.log("VideoTracks", localMediaStream.getVideoTracks());
+                    video.onloadedmetadata = function(e) {
+                        video.play();
+                    };
+                    // video.play();
+                };
+            })
+            .catch(function(e) {
+                console.log('Reeeejected!', e);
+            });
+    </script>
+    <div id="camera">
+        <div id="contentHolder">
+            <video id="video" width="300" height="300" autoplay></video>
+            <canvas style="display:none;" id="canvas" width="300" height="300"></canvas>
+        </div>
+        <button id="start">打开摄像头</button>
+        <button id="close">关闭摄像头</button>
+        <button id="btn_snap">拍照</button>
+        <script>
+            var canvas = document.getElementById("canvas"),
+                pzBtn = document.getElementById("btn_snap"),
+                context = canvas.getContext("2d");
+            close1 = document.getElementById("close");
+            video = document.getElementById("video");
+            start = document.getElementById("start");
+            start.addEventListener('click', function() {
+
+                alert('该页面会调用您的摄像头')
+                    // 旧版本浏览器可能根本不支持mediaDevices，我们首先设置一个空对象
+                if (navigator.mediaDevices === undefined) {
+                    navigator.mediaDevices = {};
+                }
+                // 一些浏览器实现了部分mediaDevices，我们不能只分配一个对象
+                // 使用getUserMedia，因为它会覆盖现有的属性。
+                // 这里，如果缺少getUserMedia属性，就添加它。
+                if (navigator.mediaDevices.getUserMedia === undefined) {
+                    navigator.mediaDevices.getUserMedia = function(constraints) {
+                        // 首先获取现存的getUserMedia(如果存在)
+                        var getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+                        // 有些浏览器不支持，会返回错误信息
+                        // 保持接口一致
+                        if (!getUserMedia) {
+                            return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+                        }
+                        //否则，使用Promise将调用包装到旧的navigator.getUserMedia
+                        return new Promise(function(resolve, reject) {
+                            getUserMedia.call(navigator, constraints, resolve, reject);
+                        });
+                    }
+                }
+                var constraints = {
+                    audio: false,
+                    video: {
+                        width: 720,
+                        height: 720
+                    }
+                }
+                navigator.mediaDevices.getUserMedia(constraints)
+                    .then(function(stream) {
+                        var video = document.querySelector('video');
+                        // 旧的浏览器可能没有srcObject
+                        if ("srcObject" in video) {
+                            video.srcObject = stream;
+                        } else {
+                            //避免在新的浏览器中使用它，因为它正在被弃用。
+                            video.src = window.URL.createObjectURL(stream);
+                        }
+                        video.onloadedmetadata = function(e) {
+                            video.play();
+                        };
+                    })
+                    .catch(function(err) {
+                        console.log(err.name + ": " + err.message);
+                    });
+
+
+
+                pzBtn.addEventListener("click", function() {
+                    // 点击，canvas画图
+                    context.drawImage(video, 0, 0, 300, 300);
+                    // 获取图片base64链接
+                    var image = canvas.toDataURL('image/png');
+                    // 定义一个img
+                    var img = new Image();
+                    //设置属性和src
+                    img.id = "imgBoxxx";
+                    img.src = image;
+                    //将图片添加到页面中
+                    document.body.appendChild(img);
+                    // base64转文件
+                    function dataURLtoFile(dataurl, filename) {
+                        var arr = dataurl.split(','),
+                            mime = arr[0].match(/:(.*?);/)[1],
+                            bstr = atob(arr[1]),
+                            n = bstr.length,
+                            u8arr = new Uint8Array(n);
+                        while (n--) {
+                            u8arr[n] = bstr.charCodeAt(n);
+                        }
+                        return new File([u8arr], filename, {
+                            type: mime
+                        });
+                    }
+                    console.log(dataURLtoFile(image, 'aa.png'));
+                });
+            })
+            close1.addEventListener('click', function() {
+                MediaStreamTrack && MediaStreamTrack.stop();
+            });
+        </script>
+    </div>
+</body>
+
+</html>

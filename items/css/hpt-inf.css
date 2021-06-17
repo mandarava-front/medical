@@ -1,0 +1,76 @@
+/* 返回顶部样式开始 */
+.returntop{
+    position: fixed;
+    z-index: 1000;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    line-height: 35px;
+    background: #ccc;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid #eee;
+    opacity: 0.5;
+    border-radius: 100%;
+    color: #2A9EE0;
+}
+.returntop>a{
+    display: block;   
+     border-radius: 100%;
+    text-decoration: none;
+}
+.returntop>a:hover{
+    color: #fff;
+    background: #2A9EE0;;
+}
+/* 返回顶部样式结束 */
+.detail-main #contents>h3{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #008AD8;
+    font-weight: bold;
+  }
+  .detail-main #contents>p{
+      width: 80%;
+      height: 20px;
+      text-align: right;
+      line-height: 20px;
+      color: #a00;
+      font-weight: bold;
+  }
+  .detail-main #contents>div>p{
+    width: 100%;
+    height:auto;
+    line-height: 30px;
+    color: rgba(138, 134, 134, 0.712);
+    font-size: 14px;
+    padding: 0 42px;
+}
+.detail-main #contents>div>p>span,.detail-main #contents>h4>span{
+    font-weight: bold;
+}
+.detail-main #contents>h4{
+    font-family: '宋体';
+    padding:0 10px;
+    text-indent: 32px;
+    width: 100%;
+    height: auto;
+    line-height: 30px;
+}
+.detail-main #contents>h5{
+    padding:0 10px;
+   text-align: right;
+    width: 95%;
+    height: auto;
+    line-height: 30px;
+    color: #000;
+}
+.detail-main #contents>img{
+    width: 90%;
+    margin: 5%;
+    height: auto;
+}

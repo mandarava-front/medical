@@ -1,0 +1,102 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+header>p {
+    width: 80%;
+}
+
+.con {
+    width: 80%;
+}
+
+.con>.top {
+    width: 100%;
+    background-color: #72c3f1;
+    height: 200px;
+}
+
+.con>.top>.sculpture {
+    text-align: center;
+    width: 40%;
+    float: left;
+}
+
+.con>.top>.sculpture>img {
+    border-radius: 100px;
+}
+
+.con>.top>.named {
+    width: 60%;
+    float: left;
+}
+
+.con>.top>.named>h1 {
+    margin-top: 50px;
+}
+
+.con>.top>.named>p {
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.con>.info {
+    clear: both;
+    width: 100%;
+}
+
+.con>div>h2 {
+    text-align: center;
+    line-height: 60px;
+}
+
+.con>.info>table {
+    width: 100%;
+    border: 1px solid #eee;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.con>.info>table tr {
+    width: 100%;
+}
+
+.con>.info>table tr>td {
+    width: 12.5%;
+    height: 50px;
+    border: 1px solid #eee;
+}
+
+.con>.appointment>p>a {
+    display: block;
+}
+
+.con>.appointment>p>a>button {
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #ccc;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(240, 95, 95);
+}
+
+.con>.appointment>table,
+.con>.diagnosis>table {
+    width: 100%;
+    border: 1px solid #eee;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.con>.appointment>table tr,
+.con>.diagnosis>table tr {
+    width: 100%;
+}
+
+.con>.appointment>table tr>td,
+.con>.diagnosis>table tr>td {
+    width: 12.5%;
+    height: 50px;
+    border: 1px solid #eee;
+}

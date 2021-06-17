@@ -1,0 +1,45 @@
+p{
+    font-size: 18px;
+    font-weight: lighter;
+    line-height: 25px;
+}
+.main-content img{
+    width: 800px;
+    height: 636px;
+    position: relative;
+    left: 15%;
+}
+h4,h5{
+    font-weight: 700;
+}
+.feature{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.info img{
+    margin-top: 50px;
+}
+.overall div{
+    margin-bottom: 30px;
+}
+p span{
+    padding-left: 12px;
+}
+.table{
+    width: 90%;
+    position: relative;
+    left: 8%;
+    margin-top: 20px;
+}
+.table ul li{
+    float: left;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 8px;
+}
+.table ul li p{
+    margin: 8px 0px 0px 0px;
+}
+h4{
+    margin-top:45px;
+}

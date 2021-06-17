@@ -1,0 +1,33 @@
+/* 新闻详情页 ================= */
+
+.news-info h2 {
+    font-weight: normal;
+    padding-top: 10px;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+}
+
+.news-info h5 {
+    overflow: hidden;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.news-info h5>span {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.news-info h5>.author {
+    font-weight: 600;
+}
+
+p {
+    line-height: 30px;
+}
+
+div {
+    font-size: 18px;
+}

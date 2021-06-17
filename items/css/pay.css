@@ -1,0 +1,203 @@
+.topbar {
+    width: 100%;
+    height: 26px;
+    background: url(https://i.alipayobjects.com/e/201305/OzLou0mHd.png) repeat-x 0 0;
+}
+
+.topbar .topbar-wrap {
+    background: url(https://i.alipayobjects.com/e/201305/OzLou0mHd.png) repeat-x 0 0;
+    width: 950px;
+    margin: 0 auto;
+}
+
+.topbar .topbar-wrap a,
+.topbar .topbar-wrap span {
+    float: right;
+    color: #fff;
+    padding: 4px 15px;
+    background: url(https://i.alipayobjects.com/e/201305/OzUPukVET.png) no-repeat 0 7px;
+}
+
+#header {
+    height: 60px;
+    background-color: #fff;
+    border-bottom: 1px solid #d9d9d9;
+    margin-top: 0px;
+}
+
+.header-container {
+    width: 950px;
+    margin: 0 auto;
+}
+
+#header .header-title {
+    width: 250px;
+    height: 60px;
+    float: left;
+}
+
+.alipay-logo {
+    display: block;
+    width: 114px;
+    position: relative;
+    left: 0;
+    top: 10px;
+    float: left;
+    height: 40px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url(https://t.alipayobjects.com/images/T1HHFgXXVeXXXXXXXX.png);
+}
+
+#header .logo-title {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "Microsoft YaHei", 微软雅黑, "宋体";
+    border-left: 1px solid #676d70;
+    color: #676d70;
+    height: 20px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+body {
+    background-color: rgb(239, 240, 241);
+}
+
+#container {
+    width: 950px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: rgb(239, 240, 241);
+}
+
+.order-extand-explain {
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px;
+}
+
+.order-extand-explain span {
+    display: block;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.cashier-center-container {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 950px;
+    min-height: 460px;
+    background-color: #fff;
+    border-bottom: 3px solid #b3b3b3;
+}
+
+.pay {
+    position: relative;
+    width: 803px;
+}
+
+.qrcode-header {
+    display: block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    margin-top: 75px;
+    margin-bottom: 16px;
+}
+
+html body .ft-center {
+    text-align: center;
+}
+
+.qrcode-header-money {
+    font-size: 26px;
+    font-weight: 700;
+    color: #f60;
+}
+
+.qrcode-integration .qrcode-img-wrapper {
+    position: relative;
+    width: 168px;
+    height: auto;
+    min-height: 168px;
+    margin: 0 auto;
+    padding: 6px;
+    border: 1px solid #d3d3d3;
+    -webkit-box-shadow: 1px 1px 1px #ccc;
+    box-shadow: 1px 1px 1px #ccc;
+}
+
+.qrcode-integration .qrcode-img-area {
+    width: 168px;
+    height: 168px;
+    text-align: center;
+}
+
+.qrcode-integration .qrcode-img-area {
+    width: 220px;
+    margin: 0 auto;
+    position: relative;
+    height: 185px;
+}
+
+html body .fn-left {
+    float: left;
+}
+
+.qrcode-img-explain {
+    padding: 0px 0 6px;
+}
+
+.qrcode-img-explain div {
+    margin-left: 10px;
+}
+
+.qrcode-img-explain img {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.fn-clear {
+    zoom: 1;
+}
+
+.qrcode-img-explain {
+    overflow: hidden;
+}
+
+.qrcode-explain {
+    margin: 0;
+    font-size: 14px;
+}
+
+.qrcode-downloadApp,
+.qrcode-downloadApp:hover,
+.qrcode-downloadApp:active,
+.qrcode-explain a.qrcode-downloadApp:hover {
+    font-size: 12px;
+    color: #a6a6a6;
+    text-decoration: underline;
+}
+
+.qrcode-foot {
+    text-align: center;
+}
+
+.qrcode-foot {
+    height: 65px;
+    padding: 10px 0;
+    display: none;
+}
+
+.qrguide-area {
+    position: absolute;
+    top: -10px;
+    left: 505px;
+    width: 204px;
+    height: 183px;
+    cursor: pointer;
+}

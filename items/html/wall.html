@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧医疗</title>
+
+    <link rel="stylesheet" href="../lib/bootstrap.v3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/wall.css">
+    <script src="../js/jquery.1.10.0.js"></script>
+    <script src="../lib/bootstrap.v3.3.7/js/bootstrap.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/wall.js"></script>
+</head>
+
+<body>
+    <!-- 头部 开始 -->
+    <header>
+        <!-- header顶部内容 开始 -->
+        <div class="header-top container">
+            <div class="row">
+                <!-- LOGO 开始 -->
+                <div class="col-md-2 logo">
+                    <a href="index.html"><img class="img-responsive" src="../img/logo2.png" alt="网站logo"></a>
+                </div>
+                <!-- LOGO 结束 -->
+                <div class="col-md-7 top-tip">
+                    <!-- 头部标题开始 -->
+                    <div class="col-md-4 tip">
+                        <h3>智慧在线医疗</h3>
+                    </div>
+                    <!-- 头部标题结束 -->
+                    <!-- 头部搜索框 开始 -->
+                    <div class="col-md-6 top-nav-search">
+                        <form action="#">
+                            <input type="text" name="search">
+                            <button>
+                                <i class="ico-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <!-- 头部搜索框 结束 -->
+                </div>
+                <!-- 用户模块 开始 -->
+                <div class="col-md-2 top-user">
+                    <!-- 用户头部 -->
+                    <div class="top-header-user">
+                        <a href="personal.html"><img src="../img/noLogin.jpg" alt=""></a><span>用户</span><i>&gt;</i>
+                    </div>
+                    <!-- 登录模块 -->
+                    <ul class="top-body-user">
+                        <!-- 未登录显示的状态 -->
+                        <!-- <li><button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#registerModal">
+                                注册
+                            </button></li>
+                        <li><button type="button" class="btn btn-default" data-toggle="modal" data-target="#loginModal">
+                                登录
+                            </button></li> -->
+                        <!-- 登录显示的状态 -->
+                        <!-- <li><button type="button" class="btn btn-danger">退出</button></li> -->
+                    </ul>
+                </div>
+                <!-- 用户模块 结束 -->
+                <!-- 定位标识 -->
+                <div class="col-md-1 map">
+                    <a href="https://map.baidu.com/"><img src="../img/map.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <!-- header顶部内容 结束 -->
+        <!-- 二级菜单 开始 -->
+        <div class="header-nav">
+            <div class="container">
+                <div class="row">
+                    <!-- 二级菜单内容 开始 -->
+                    <ul class="col-md-12 header-nav-list"></ul>
+                    <!-- 二级菜单内容 结束 -->
+                </div>
+            </div>
+        </div>
+        <!-- 二级菜单 结束 -->
+    </header>
+    <!-- 头部 结束 -->
+    <!-- 主体内容 开始 -->
+    <div class="main container">
+        <div class="row">
+            <!-- 添加留言 -->
+            <div class="message col-md-12">
+                <h2 class="text-center">留言</h2>
+                <form class="clearfix" action="javascript:void">
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <textarea id="msgTextarea" class="form-control" placeholder="在此留言哦~~" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <button id="submit" class="btn btn-info">提交</button>
+                            <button class="btn btn-default">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- 显示留言信息 -->
+            <div class="showmsg col-md-12">
+                <h3 class="col-md-offset-1 text-left">留言列表</h3>
+                <div id="smn"></div>
+                <ul class="showMsgList">
+                    <!-- bootstrap组件的媒体对象 -->
+                    <!-- <li class="row">
+                        <div class="media col-md-offset-1">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" src="..." alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Media heading</h4>
+                                ...
+                            </div>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- 主体内容 结束 -->
+    <!-- 页脚 开始 -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <!-- 页脚logo -->
+                    <img src="../img/logo.png" alt="医疗" class="footer-logo">
+                    <!-- 页脚链接 -->
+                    <p class="footer-links">
+                        <a href="#">联系我们</a>
+                        <a href="#">加入我们</a>
+                        <a href="#">关于我们</a>
+                    </p>
+                    <!-- 版权信息 -->
+                    <div class="footer-copyr">
+                        <p>Copyright © 2015 智医疗网 All rights reserved </p>
+                        <p><a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备14056780号</a></p>
+                    </div>
+                    <!-- 友情链接 -->
+                    <div class="links">
+                        <br>
+                        <span class="links-title">友情链接：</span>
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <!-- 二维码 -->
+                    <div class="footer-code">
+                        <img class="img-responsive" src="../img/code.jpg" alt="二维码">
+                        <p>搜索“XXX”</p>
+                        <p>或者扫描二维码</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 页脚 结束 -->
+    <script>
+        $(function() {
+            // 获取dom元素
+            var $thirdNavDom = $('.detail-left-menu')
+                // 调用三级导航的处理函数
+            addSecondNav($thirdNavDom, navLink, )
+            loginInit()
+        })
+    </script>
+
+</body>
+
+</html>

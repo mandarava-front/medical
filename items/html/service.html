@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧医疗</title>
+    <link rel="icon" href="data:;base64,=">
+    <link href="https://www.etransfar.com/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="../lib/bootstrap.v3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/detailPage.css">
+    <link rel="stylesheet" href="../css/service.css">
+    <script src="../js/jquery.1.10.0.js"></script>
+    <script src="../lib/bootstrap.v3.3.7/js/bootstrap.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/mock.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/service.js"></script>
+    <script src="../js/address.js"></script>
+    <script src="../lib/distpicker.js"></script>
+</head>
+
+<body>
+    <!-- 头部 开始 -->
+    <header>
+        <!-- header顶部内容 开始 -->
+        <div class="header-top container">
+            <div class="row">
+                <!-- LOGO 开始 -->
+                <div class="col-md-2 logo">
+                    <a href="index.html"><img class="img-responsive" src="../img/logo2.png" alt="网站logo"></a>
+                </div>
+                <!-- LOGO 结束 -->
+                <div class="col-md-7 top-tip">
+                    <!-- 头部标题开始 -->
+                    <div class="col-md-4 tip">
+                        <h3>智慧在线医疗</h3>
+                    </div>
+                    <!-- 头部标题结束 -->
+                    <!-- 头部搜索框 开始 -->
+                    <div class="col-md-6 top-nav-search">
+                        <form action="#">
+                            <input type="text" name="search">
+                            <button>
+                                <i class="ico-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <!-- 头部搜索框 结束 -->
+                </div>
+                <!-- 用户模块 开始 -->
+                <div class="col-md-2 top-user">
+                    <!-- 用户头部 -->
+                    <div class="top-header-user">
+                        <a href="personal.html"><img src="../img/noLogin.jpg" alt="默认用户头像"></a><span>用户</span><i>&gt;</i>
+                    </div>
+                    <!-- 登录模块 -->
+                    <ul class="top-body-user">
+                        <!-- 未登录显示的状态 -->
+                        <!-- <li><button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#registerModal">
+                                注册
+                            </button></li>
+                        <li><button type="button" class="btn btn-default" data-toggle="modal" data-target="#loginModal">
+                                登录
+                            </button></li> -->
+                        <!-- 登录显示的状态 -->
+                        <!-- <li><button type="button" class="btn btn-danger">退出</button></li> -->
+                    </ul>
+                </div>
+                <!-- 用户模块 结束 -->
+                <!-- 定位标识 -->
+                <div class="col-md-1 map">
+                    <a href="https://map.baidu.com/"><img src="../img/map.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <!-- header顶部内容 结束 -->
+        <!-- 二级菜单 开始 -->
+        <div class="header-nav">
+            <div class="container">
+                <div class="row">
+                    <!-- 二级菜单内容 开始 -->
+                    <ul class="col-md-12 header-nav-list"></ul>
+                    <!-- 二级菜单内容 结束 -->
+                </div>
+            </div>
+        </div>
+        <!-- 二级菜单 结束 -->
+    </header>
+    <!-- 头部 结束 -->
+    <!-- 主体内容 开始 -->
+    <div class="main container">
+        <div class="main-middle">
+            <!-- 地点联动 -->
+            <div class="col-md-12 top-address ">
+                <h4>按医院找医生:</h4>
+                <!-- <div class="three-content ">
+                    <span>地区:</span>
+                    <select id="type" onchange="fn()">
+                        <option value="fruit">首字母</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="F">F</option>
+                        <option value="G">G</option>
+                        <option value="H">H</option>
+                        <option value="J">J</option>
+                        <option value="L">L</option>
+                        <option value="M">N</option>
+                        <option value="Q">Q</option>
+                        <option value="S">S</option>
+                        <option value="T">T</option>
+                        <option value="X">X</option>
+                        <option value="Y">Y</option>
+                        <option value="Z">Z</option>
+                    </select>
+                    <select id="area" onchange="bn()">
+                        <option value="df1">安徽省</option>
+                       
+                    </select>
+                    <select id="df">
+                        <option>城市a</option>
+                        <option>城市b</option>
+                        <option>城市c</option>
+                        <option>城市d</option>
+                        <option>城市e</option>
+                        <option>城市f</option>
+                        <option>城市g</option>
+                        <option>城市h</option>
+                        <option>城市i</option>
+                        <option>城市j</option>
+                        <option>城市k</option>
+                        <option>城市l</option>
+                    </select>
+                </div> -->
+                <div data-toggle="distpicker" class="addr">
+                    <span>地区：</span>
+                    <!-- container -->
+                    <select></select>
+                    <!-- 省 -->
+                    <select></select>
+                    <!-- 市 -->
+                    <select></select>
+                    <!-- 区 -->
+                </div>
+                <!-- 医院 -->
+                <div class="hospital">
+                    <span>医院：</span>
+                    <div class="choose-content">
+                        <div class="main-item ">
+                            不限
+                        </div>
+                        <div class="main-item">
+                            北京大学第一医院
+                        </div>
+                        <div class="main-item">
+                            秦皇岛第一人民医院
+                        </div>
+                        <div class="main-item">
+                            河北省第一人民医院
+                        </div>
+                        <div class="main-item">
+                            唐山第一人民医院
+                        </div>
+                        <div class="main-item">
+                            北京中医医院
+                        </div>
+                    </div>
+                </div>
+                <!-- 科室 -->
+                <div class="depart">
+                    <span>科室：</span>
+                    <div class="choose-content">
+                        <div class="main-item ">
+                            不限
+                        </div>
+                        <div class="main-item ">
+                            内科
+                        </div>
+                        <div class="main-item ">
+                            外科
+                        </div>
+                        <div class="main-item ">
+                            妇产科学
+                        </div>
+                        <div class="main-item">
+                            生殖中心
+                        </div>
+                        <div class="main-item ">
+                            儿科学
+                        </div>
+                        <div class="main-item ">
+                            骨外科
+                        </div>
+                        <div class="main-item ">
+                            眼科学
+                        </div>
+                        <div class="main-item ">
+                            口腔科学
+                        </div>
+                        <div class="main-item ">
+                            耳鼻咽喉头颈科
+                        </div>
+                        <div class="main-item ">
+                            肿瘤科
+                        </div>
+                        <div class="main-item ">
+                            皮肤性病科
+                        </div>
+                        <div class="main-item ">
+                            男科
+                        </div>
+                        <div class="main-item ">
+                            皮肤美容
+                        </div>
+                        <div class="main-item ">
+                            烧伤科
+                        </div>
+                        <div class="main-item ">
+                            精神心理科
+                        </div>
+                        <div class="main-item ">
+                            中医学
+                        </div>
+                        <div class="main-item ">
+                            中西医结合科
+                        </div>
+                        <div class="main-item ">
+                            传染病科
+                        </div>
+                        <div class="main-item ">
+                            结核病科
+                        </div>
+                        <div class="main-item ">
+                            介入医学科
+                        </div>
+                        <div class="main-item ">
+                            康复医学科
+                        </div>
+                        <div class="main-item ">
+                            运动医学科
+                        </div>
+                        <div class="main-item ">
+                            麻醉医学科
+                        </div>
+                        <div class="main-item ">
+                            职业病科
+                        </div>
+                        <div class="main-item ">
+                            地方病科
+                        </div>
+                        <div class="main-item ">
+                            营养科
+                        </div>
+                        <div class="main-item ">
+                            医学影像学
+                        </div>
+                        <div class="main-item ">
+                            病理科
+                        </div>
+                        <div class="main-item ">
+                            其他科室
+                        </div>
+                    </div>
+                </div>
+                <!-- 疾病 -->
+                <div class="ill">
+                    <span>疾病：</span>
+                    <div class="choose-content">
+                        <div class="main-item ">
+                            不限
+                        </div>
+                        <div class="main-item ">
+                            血管瘤
+                        </div>
+                        <div class="main-item ">
+                            高血压
+                        </div>
+                        <div class="main-item ">
+                            疼痛
+                        </div>
+                        <div class="main-item ">
+                            甲状腺疾病
+                        </div>
+                        <div class="main-item ">
+                            产前检查
+                        </div>
+                        <div class="main-item ">
+                            头痛
+                        </div>
+                        <div class="main-item ">
+                            头晕
+                        </div>
+                        <div class="main-item ">
+                            痤疮
+                        </div>
+                        <div class="main-item ">
+                            淋巴结炎
+                        </div>
+                        <div class="main-item ">
+                            失眠
+                        </div>
+                        <div class="main-item ">
+                            糖尿病
+                        </div>
+                        <div class="main-item ">
+                            感染
+                        </div>
+                        <div class="main-item ">
+                            感冒
+                        </div>
+                        <div class="main-item ">
+                            体检
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 加载出诊专家 -->
+            <div class="doc col-md-12">
+                <h4>今日出诊专家</h4>
+                <!-- <div class="doctor">
+                    <div class="imga"><img src="../img/doc-1-1-2.jpg" alt=""></div>
+                    <div class="intr">
+                        <p class="name"><span>姓名：</span><span></span></p>
+                        <p class="pro"><span>医院</span> <span>置为</span></p>
+                        <p class="info"></p>
+                        <button><a href="./register.html">预约</a></button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="main-right">
+            <div class="component-recommend">
+                <div class="component-recommend-item">
+                    <div class="component-recommend-header">
+                        <div class="recommend-header-line"></div>
+                        <div class="recommend-header-title">相关医生</div>
+                        <div class="recommend-header-btn"><a href="./doctor.html">查看全部</a><span class="recommend-header-more"></span></div>
+                    </div>
+                    <div class="component-recommend-container recommend-container-bottom rr3">
+                        <!-- <div class="recommend-detailBase">
+                            <div class="recommend-detailBase-avatar">
+                                <img src="../img/noLogin.jpg">
+                            </div>
+                            <div class="recommend-detailBase-main">
+                                <div class="recommend-detailBase-main-subtitle">
+                                    医师
+                                </div>
+                                <div class="recommend-detailBase-main-tagText">
+                                    <div class="widget-text-ellipsis-box widget-text-ellipsis-box--visible">
+                                        <div class="widget-text-ellipsis-text ">简介: </div>
+                                        <div class="widget-text-ellipsis-text widget-text-ellipsis-placeholder widget-text-ellipsis-placeholder--maxline widget-text-ellipsis-placeholder--computed">
+                                            简介: </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="component-recommend-item">
+                    <div class="component-recommend-header">
+                        <div class="recommend-header-line"></div>
+                        <div class="recommend-header-title">相关文章</div>
+                        <div class="recommend-header-btn">查看全部<span class="recommend-header-more"></span></div>
+                    </div>
+                    <div class="component-recommend-container ">
+                        <div class="recommend-lists">
+                            <ul>
+                                <li class="recommend-lists-item">比hi那次那次诶地欧弟</li>
+                                <li class="recommend-lists-item">城北U玩曾被哦ID牛</li>
+                                <li class="recommend-lists-item">仓库次哦电脑我的</li>
+                                <li>以医保引导“药价” 我国将加强药品价格常态化监管</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component-contact">
+                <div class="component-contact-header">
+                    <span class="contact-header-label"></span>
+                    <span class="contact-header-text">联系我们</span>
+                </div>
+                <ul class="component-contact-list">
+                    <li class="component-contact-item" style="width: 25%;">
+                        <a class="contact-item">
+                            <div class="contact-item-icon icon-evaluation"></div>
+                            <div class="contact-item-text">评价</div>
+                        </a>
+                    </li>
+                    <li class="component-contact-item" style="width: 25%;">
+                        <a class="contact-item">
+                            <div class="contact-item-icon icon-leave-tel"></div>
+                            <div class="contact-item-text">留电</div>
+                        </a>
+                    </li>
+                    <li class="component-contact-item" style="width: 25%;">
+                        <a href="wall.html" class="contact-item">
+                            <div class="contact-item-icon icon-leave-message"></div>
+                            <div class="contact-item-text">留言</div>
+                        </a>
+                    </li>
+                    <li class="component-contact-item" style="width: 25%;">
+                        <a class="contact-item">
+                            <div class="contact-item-icon icon-consult"></div>
+                            <div class="contact-item-text">电话咨询</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- 主体内容 结束 -->
+    <!-- 页脚 开始 -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <!-- 页脚logo -->
+                    <img src="../img/logo.png" alt="医疗" class="footer-logo">
+                    <!-- 页脚链接 -->
+                    <p class="footer-links">
+                        <a href="#">联系我们</a>
+                        <a href="#">加入我们</a>
+                        <a href="#">关于我们</a>
+                    </p>
+                    <!-- 版权信息 -->
+                    <div class="footer-copyr">
+                        <p>Copyright © 2015 智医疗网 All rights reserved </p>
+                        <p><a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备14056780号</a></p>
+                    </div>
+                    <!-- 友情链接 -->
+                    <div class="links">
+                        <br>
+                        <span class="links-title">友情链接：</span>
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <!-- 二维码 -->
+                    <div class="footer-code">
+                        <img class="img-responsive" src="../img/code.jpg" alt="二维码">
+                        <p>搜索“XXX”</p>
+                        <p>或者扫描二维码</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 页脚 结束 -->
+    <script>
+        $(function() {
+            // 获取dom元素
+            var $thirdNavDom = $('.detail-left-menu');
+            // 调用三级导航的处理函数
+            addSecondNav($thirdNavDom, navLink, );
+            loginInit();
+        })
+    </script>
+
+</body>
+
+</html>

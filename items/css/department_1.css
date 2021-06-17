@@ -1,0 +1,53 @@
+.local>div {
+    font-size: 14px;
+}
+
+.mmain>.de_info>h2 {
+    text-align: center;
+}
+
+.mmain>.de_info>p {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.de_main>img {
+    max-width: 100%;
+}
+
+.doctor {
+    overflow: hidden;
+}
+
+.doctor>h3 {
+    text-shadow: #2A9EE0 5px 5px 3px;
+    color: #aaa;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.doctor_man {
+    float: left;
+    width: 50%;
+    height: 450px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.doctor_man>a {
+    text-align: center;
+}
+
+.doctor_man>a>img {
+    max-width: 100%;
+    min-width: 80%;
+    height: 360px;
+    display: block;
+    margin: auto;
+}
+
+.doctor_man>p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}

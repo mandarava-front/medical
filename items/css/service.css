@@ -1,0 +1,524 @@
+/* .main-left, */
+
+.main-middle {
+    position: relative;
+    height: 100%;
+}
+
+
+/* .main-left {
+    float: left;
+    width: 171px;
+    background-color: rgba(230, 237, 239, .5);
+} */
+
+
+/* 地点联动 */
+
+.top-address {
+    padding-top: 25px;
+    clear: both;
+}
+
+.top-address>div>select {
+    width: 25%;
+    height: 30px;
+}
+
+.top-address>.addr {
+    height: 50px;
+}
+
+.top-address>div {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.top-address>div>span {
+    /* float: left; */
+    display: inline-block;
+    line-height: 30px;
+}
+
+
+/* 医院 */
+
+.hospital {
+    width: 100%;
+    position: relative;
+}
+
+.top-address>.hospital>span,
+.top-address>.depart>span,
+.top-address>.ill>span {
+    float: left;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+.choose-content>.main-item {
+    float: left;
+    margin-right: 10px;
+    padding: 0;
+    border-bottom: none;
+    border-radius: 5px;
+    padding: 0 5px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.choose-content>.main-checked {
+    background-color: rgb(177, 225, 247);
+}
+
+
+/* 医院结束 */
+
+.component-navigation {
+    padding: 0 24px;
+    height: 490px;
+    text-align: center;
+}
+
+.component-navigation .component-navigation-title {
+    padding: 19px 0;
+    border-bottom: 1px solid #e4e7f1;
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #000;
+}
+
+.component-navigation .component-navigation-list {
+    color: red;
+}
+
+.component-navigation .component-navigation-list .component-navigation-item {
+    margin: 0;
+    list-style: none;
+    padding: 15px 0;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #555;
+    letter-spacing: 0;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.imlp-component-qrcode {
+    padding: 0 12px;
+    border-top: 1px solid #e4e7f1;
+}
+
+.imlp-component-qrcode-wrapper {
+    margin: 0 auto;
+    max-width: 200px;
+}
+
+.imlp-component-qrcode-wrapper .qrcode-img {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.imlp-widget-qrcode {
+    display: inline-block;
+}
+
+.imlp-component-qrcode-wrapper .qrcode-text {
+    margin: 0 auto;
+    padding-top: 6px;
+    width: 110px;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #a2a2a2;
+    letter-spacing: 0;
+    line-height: 17px;
+    text-align: center;
+}
+
+.imlp-widget-qrcode img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-middle {
+    display: inline-block;
+    width: 65%;
+    border-right: 1px solid #e4e7f1;
+    background-color: #fff;
+}
+
+
+/* 
+留言板
+
+.message h2 {
+    color: #333;
+}
+
+.message form textarea {
+    resize: none;
+}
+
+.message .form-group {
+    padding-top: 10px;
+    overflow: hidden;
+    height: auto;
+}
+
+.message .form-group button {
+    margin-right: 30px;
+}
+
+.showmsg {
+    margin-bottom: 50px;
+}
+
+.showmsg li {
+    margin: 20px 0;
+}
+
+.showmsg li div.media {
+    padding: 15px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.showmsg li:last-child div.media {
+    border: none;
+} */
+
+
+/* 出诊专家模块 */
+
+.doc {
+    clear: both;
+    padding-top: 30px;
+}
+
+.doc>.doctor {
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
+}
+
+.doc>.doctor>.imga,
+.doc>.doctor>.intr {
+    float: left;
+}
+
+.doc>.doctor>.imga {
+    width: 30%;
+    margin-right: 20px;
+}
+
+.doc>.doctor>.imga>img {
+    width: 100%;
+    height: 200px;
+}
+
+.doc>.doctor>.intr {
+    width: 65%;
+    height: 200px;
+    /* overflow: hidden; */
+}
+
+.doc>.doctor>.intr>.name>span:last-child {
+    font-size: 20px;
+}
+
+.doc>.doctor>.intr>.pro>span {
+    font-size: 20px;
+}
+
+.doc>.doctor>.intr>.info {
+    height: 74px;
+    overflow: hidden;
+    line-height: 24px;
+}
+
+.doc>.doctor>.intr>button {
+    width: 120px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(121, 212, 240);
+}
+
+.doc>h4 {
+    height: 50px;
+    line-height: 50px;
+}
+
+.main-right {
+    float: right;
+    width: 34%;
+    height: 100%;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.imlp-app-container--xyl .component-recommend {
+    margin-bottom: 0;
+    height: auto;
+}
+
+.component-recommend {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.component-recommend-item {
+    padding-top: 20px;
+}
+
+.component-recommend-header {
+    padding-left: 12px;
+    padding-right: 24px;
+    font-size: 0;
+}
+
+.component-recommend-header div {
+    display: inline-block;
+}
+
+.recommend-header-line {
+    margin-right: 8px;
+    width: 2px;
+    height: 10px;
+    border-radius: 1.5px;
+    background: #3d88f2;
+}
+
+.recommend-header-title {
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #000;
+}
+
+.component-recommend-header div {
+    display: inline-block;
+}
+
+.recommend-header-btn {
+    font-size: 13px;
+    color: #000;
+    float: right;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.recommend-header-more {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    vertical-align: middle;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/icon-read-all.png);
+}
+
+.recommend-container-bottom {
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(228, 231, 241, .5);
+}
+
+.component-recommend-container {
+    margin-left: 21px;
+    margin-right: 29px;
+}
+
+.recommend-buttongroup {
+    max-height: 84px;
+    overflow: hidden;
+    background-color: #f00;
+}
+
+.recommend-buttongroup-button {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 5px;
+    padding: 0 10px;
+    line-height: 28px;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    background: 0 0;
+    border: 1px solid #e8e8e8;
+    border-radius: 15px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.recommend-detailBase {
+    padding-top: 12px;
+    height: auto;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.recommend-detailBase .recommend-detailBase-avatar {
+    /* float: left; */
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+.recommend-detailBase .recommend-detailBase-avatar img {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.recommend-detailBase-main {
+    background-color: #fff;
+    display: inline-block;
+}
+
+.recommend-detailBase-main-subtitle {
+    font-family: PingFangSC-Semibold;
+    font-size: 14px;
+    color: #000;
+    letter-spacing: 0;
+    line-height: 20px;
+    display: inline-block;
+}
+
+.recommend-detailBase-main-tagText {
+    color: #666;
+}
+
+.widget-text-ellipsis-box--visible {
+    visibility: visible;
+    left: 0;
+    height: auto;
+}
+
+.widget-text-ellipsis-box {
+    width: 100%;
+    font-size: 14px;
+    position: relative;
+}
+
+.widget-text-ellipsis-text {
+    line-height: 20px;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.widget-text-ellipsis-placeholder--computed {
+    display: none!important;
+}
+
+.widget-text-ellipsis-placeholder--maxline {
+    position: absolute;
+    height: 1px;
+    left: 9900px;
+    white-space: nowrap;
+}
+
+.widget-text-ellipsis-placeholder {
+    visibility: visible;
+}
+
+.recommend-lists-item {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #000;
+    letter-spacing: 0;
+    line-height: 30px;
+    list-style: none;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.component-contact {
+    padding: 0 12px;
+    border-top: 1px solid #e4e7f1;
+}
+
+.component-contact .component-contact-header {
+    padding-top: 20px;
+    font-size: 0;
+}
+
+.component-contact .component-contact-header .contact-header-label {
+    display: inline-block;
+    margin-right: 8px;
+    width: 2px;
+    height: 10px;
+    border-radius: 1.5px;
+    background: #3d88f2;
+}
+
+.component-contact .component-contact-header .contact-header-text {
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #000;
+    letter-spacing: 0;
+    line-height: 1;
+}
+
+.component-contact .component-contact-list {
+    margin: 24px 0 55px;
+    list-style: none;
+    overflow: hidden;
+}
+
+.component-contact .component-contact-list .component-contact-item {
+    display: inline;
+    float: left;
+    text-align: center;
+}
+
+.contact-item .contact-item-icon {
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.icon-evaluation,
+.icon-leave-tel {
+    background-size: 100% 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.icon-evaluation {
+    background-image: url(../img/icon-evaluation.png);
+}
+
+.contact-item .contact-item-text {
+    padding-top: 10px;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #212121;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.icon-leave-tel {
+    background-image: url(../img/icon-leave-tel.png);
+}
+
+.icon-leave-message {
+    background-image: url(../img/icon-leave-message.png);
+}
+
+.icon-consult {
+    background-image: url(../img/icon-consult.png);
+}
+
+.icon-consult,
+.icon-leave-message {
+    background-size: 100% 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
